@@ -1,3 +1,5 @@
+# Clinic-database
+
 # 📗 Table of Contents
 
 - [📖 About the Project](#about-project)
@@ -14,10 +16,9 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [VET-CLINIC] <a name="about-project"></a>
+# 📖 Clinic-database <a name="about-project"></a>
 
-This VET-CLINIC project is all about making it easy to handle information at a veterinary clinic. It sets up a database structure to store details about animals, and it lets you put in information and find what you need whenever you want.
-
+The Clinic-database is the relational database for the clinic, which has patients, treatments, medical_histories, invoices, invocie_items, and medical_history_treatment tables. The relationship between the related tables is created using foreign key constraints.
 
 ## 🛠 Built With <a name="built-with"></a>
 * PostgreSQL
@@ -35,47 +36,37 @@ This VET-CLINIC project is all about making it easy to handle information at a v
 ### Key Features <a name="key-features"></a>
 - **CREATE-DATABSE**
 - **CREATE-TABLE**
-- **POPULATE-TABLE**
-
+- **FK Indexes**
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Getting Started
 
 ### Prerequisites <a name="prerequisites"></a>
 This repository includes files with plain SQL that can be used to recreate a database:
-
-- Use [schema.sql](./schema.sql) to create all tables.
-- Use [data.sql](./data.sql) to populate tables with sample data.
-- Check [queries.sql](./queries.sql) for examples of queries that can be run on a newly created database.
-
+- Use [schema_based_on_diagram](./schema_based_on_diagram.sql) to create database and all tables.
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ### Setup
 
 Clone this repository to your desired folder:
+- git clone https://github.com/MozamelJawad/clinic_db.git
 
-Example commands:
-
-*git clone https://github.com/mershark/vet-clinic-database.git
-
-*cd vet-clinic-database
-
-*git checkout vet-clinic-database
+- cd clinic_db
 
 <!-- AUTHORS -->
 
 ## 👥 Authors <a name="authors"></a>
-
-👤 **Mershark Takyi**
-
-- GitHub: [@githubhandle](https://github.com/mershark)
-- LinkedIn: [Profile link](https://www.linkedin.com/in/mershark/)
 
 👤 **Mozamel Jawad**
 
 - GitHub: [@githubhandle](https://github.com/MozamelJawad)
 - Twitter: [@twitterhandle](https://twitter.com/mozameljawad)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/mozamel-jawad/)
+
+👤 **Mershark Takyi**
+
+- GitHub: [@githubhandle](https://github.com/mershark)
+- LinkedIn: [Profile link](https://www.linkedin.com/in/mershark/)
 
 👤 **Young Gaius**
 
@@ -90,6 +81,7 @@ Example commands:
 ## 🔭Features <a name="future-features"></a>
 
 - **Additional Queries**
+- **Additional Tables**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -99,7 +91,7 @@ Example commands:
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/mershark/vet-clinic-database/issues).
+Feel free to check the [issues page](https://github.com/MozamelJawad/clinic_db/issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -117,7 +109,7 @@ If you like this project give it a star!
 
 - Thanks to the Microverse team for the great curriculum.
 - Thanks to the Code Reviewer(s) for the insightful feedback.
-- Thanks to our coding partners, the morning session team and standup team for their coperation.
+- Thanks to our coding partners, the morning session team, and the standup team for their cooperation.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
