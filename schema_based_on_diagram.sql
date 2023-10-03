@@ -43,3 +43,19 @@ CREATE TABLE invocie_items (
     invoice_id INT REFERENCES invoices(id),
     treatment_id INT REFERENCES treatments(id)
 );
+
+
+-- create the join table(medical_history_treatment) for medical_histories and treatment tables
+CREATE TABLE medical_history_treatment(
+    medical_history_id INT REFERENCES medical_histories(id),
+    treatment_id INT REFERENCES treatments(id),
+    PRIMARY KEY(medical_history_id, treatment_id)
+);
+
+-- FK indexes
+CREATE INDEX patient_id_index_medical_histories ON medical_histories(patient_id ASC);
+CREATE INDEX medical_history_id_index_invoices ON invoices(medical_history_id ASC);
+CREATE INDEX invoice_id_index_invoice_items ON invocie_items(invoice_id ASC);
+CREATE INDEX treatment_id_index_invoice_items ON invocie_items(treatment_id ASC);
+CREATE INDEX medical_history_id_index ON medical_history_treatment(medical_history_id ASC);
+CREATE INDEX treatment_id_index ON medical_history_treatment(treatment_id ASC);
