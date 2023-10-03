@@ -16,6 +16,12 @@ CREATE TABLE patients (
 );
 
 -- create medical_histories table
+CREATE TABLE medical_histories(
+     id INT PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
+     admitted_at timestamp,
+     patient_id INT REFERENCES patients (id),
+     status VARCHAR(100) NOT NULL
+);
 
 
 -- create invoices table
