@@ -34,3 +34,12 @@ CREATE TABLE invoices (
 );
 
 
+-- create invocie_items table
+CREATE TABLE invocie_items (
+    id INT PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
+    unique_price DECIMAL NOT NULL,
+    quantity INT NOT NULL,
+    total_price DECIMAL,
+    invoice_id INT REFERENCES invoices(id),
+    treatment_id INT REFERENCES treatments(id)
+);
