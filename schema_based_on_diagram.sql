@@ -25,5 +25,12 @@ CREATE TABLE medical_histories(
 
 
 -- create invoices table
+CREATE TABLE invoices (
+    id INT PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
+    total_amount DECIMAL NOT NULL,
+    generated_at TIMESTAMP,
+    payed_at TIMESTAMP,
+    medical_history_id int REFERENCES medical_histories(id)
+);
 
 
